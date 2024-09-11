@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('appointments', function (Blueprint $table) {
+            $table->id();
+            $table->dateTime('appointment_date');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('service_id');
+            $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+        });
     }
 
     /**
@@ -19,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('appointments');
     }
 };
