@@ -11,6 +11,7 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::put('/users/{id}', [UserController::class, 'update']);
+    Route::delete('/users/{id}', [UserController::class, 'destroy']);
     
     Route::middleware('role:admin')->group(function () {
         Route::get('/admin/dashboard', function () {
