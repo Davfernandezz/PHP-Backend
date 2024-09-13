@@ -79,7 +79,7 @@ Used technology:
 
 ## Diagram BD📋
 
-<img width="1423" src="./img/diagrama.PNG">
+<img width="1423" src="img/diagrama.png">
 
     - "Users" to "Appointments": One-to-many relationship where one user can have many appointments.
 
@@ -137,6 +137,17 @@ Used technology:
           POST http://127.0.0.1:8000/api/logout
 
     auth:
+
+    ```js
+        auth token
+    ```
+<br>
+
+- **Admin check**	
+
+          POST http://127.0.0.1:8000/api/admin/dashboard
+
+     auth:
 
     ```js
         auth token
