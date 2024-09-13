@@ -38,7 +38,7 @@ This project consists of a REST API developed by php and laravel that provides t
 
 <br>
 <p align="center">
-<img width="300" alt="" src="img/Descripcion.jpg">
+<img width="250" alt="" src="img/Descripcion.jpg">
 </p>
 
 
@@ -78,6 +78,8 @@ Used technology:
 
 
 ## Diagram BD📋
+
+<img width="1423" src="./img/diagrama.PNG">
 
     - "Users" to "Appointments": One-to-many relationship where one user can have many appointments.
 
