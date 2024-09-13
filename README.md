@@ -1,9 +1,9 @@
-# PHP Backend🛫
+# PHP Backend🧃
 
 Welcome to my PHP Backend project, I hope you like it! 📊
 
 <a>
-<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/ad50585b-2e08-4f45-9836-9bb6d67e2a86" width="550">
+<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/897cd757-ea1f-492d-aaf9-6d1674177e08" width="550">
 </a>
 <br><br>
 
@@ -26,17 +26,27 @@ Welcome to my PHP Backend project, I hope you like it! 📊
 
 ## Description📚
 
-The developed REST API provides the functionality to interact with the frontend in the following ways:
+This project consists of a REST API developed by php and laravel that provides the functionality to interact with the interface in the following ways:
 
-- User registration: Implement the registration of new users in the application.
-- User login with authentication using tokens and middleware: Ensure access security through the use of authentication tokens and Laravel middleware.
-- Middleware for user roles: Implement user role management to restrict access to certain functionalities.
-- CRUD of different models: Create, read, update and delete resources related to the different data models of the application.
-
+-**User registration**: Implement the registration of new users in the application.
+-**User login with authentication using tokens and middleware**: Ensure access security through the use of authentication tokens and Laravel middleware.
+-**Middleware for user roles**: Implement user role management to restrict access to certain functionalities.
+-**CRUD of different models**: Create, read, update and delete resources related to the different data models of the application.
+<br>
+<p align="center">
+<img width="250" alt="" src="img/Descripcion.jpg">
+</p>
 
 ## Objetive🎯
-The main objective is to develop a solid and functional Backend structure that integrates with an existing Frontend previously developed in React.
+The objective of the project is for the student to become familiar and adapt to the development of backend applications using PHP and Laravel, applying the principles and unique characteristics of this framework. Through this project, the aim is for the student to acquire practical experience in:
 
+-**Agile Development with Laravel**: Take advantage of the advantages of Laravel to create applications quickly and efficiently, using its routing system, database migrations and modular structure.
+
+-**Authentication and Authorization Management**: Implement robust authentication and authorization systems through the use of middleware and tools such as Laravel Passport for token management and route protection.
+
+-**Advanced Use of Eloquent and Collections**: Explore using Eloquent ORM to manage database models effectively, as well as use collections to manipulate and transform data efficiently.
+
+-**Application of Good Practices in PHP**: Adopt the best practices of PHP development, such as the separation of business logic into services, dependency injection and the proper use of common design patterns.
 
 ## Stack📒
 Used technology:
@@ -84,14 +94,17 @@ Used technology:
 
 - **Register user**
 
-          POST http://localhost:4000/api/register
+          POST http://127.0.0.1:8000/api/register
 
     body:
 
     ```js
         {
-            "email": "david@david.com",
-            "password": "123456789"
+            "name":"David",
+            "last_name":"Fernandez",
+            "email":"david@gmail.com",
+            "password":"123456789",
+            "password_confirmation":"123456789"
         }
     ```
 
@@ -99,200 +112,45 @@ Used technology:
 
 - **Login user**	
 
-          POST http://localhost:4000/api/login
+          POST http://127.0.0.1:8000/api/login
 
     body:
 
     ```js
         {
-            "email": "david@david.com",
+            "email": "david@gmail.com",
             "password": "123456789"
         }
+    ```
+
+    <br>
+
+- **Logout**	
+
+          POST http://127.0.0.1:8000/api/logout
+
+    auth:
+
+    ```js
+        auth token
     ```
 </details>
 <details>
 <summary>Users🧑🏻</summary>
 
-- **View all users** (IS ADMIN)
 
-          GET http://localhost:4000/api/users
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **View user profile**
-
-          GET http://localhost:4000/api/users/profile
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Update user profile**
-
-          PUT http://localhost:4000/api/profile/update
-
-    body:
-
-    ```js
-        {
-        "first_name": "Carlos",
-        "last_name": "Leon",
-        "email": "carlos@carlos.com",
-        "password": "123498765"
-        }
-    ```
-
-    auth:
-
-    ```js
-        auth token
-    ```
 
 </details>
 <details>
 <summary>Services🖋️</summary>
 
-- **View all services**
 
-          GET http://localhost:4000/api/services
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Create service** (IS ADMIN)
-
-          POST http://localhost:4000/api/services
-
-    body:
-
-    ```js
-        {
-        "service_name": "Tatuajes personalizados",
-        "description": "Los clientes tendrán la libertad de seleccionar motivos y diseños únicos, personalizando completamente su experiencia de tatuaje de acuerdo a sus preferencias y gustos."
-        }
-    ```
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Update service** (IS ADMIN)
-
-          PUT http://localhost:4000/api/services/:id
-
-    body:
-
-    ```js
-        {
-        "service_name": "update",
-        "description": "update"
-        }
-    ```
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Delete service** (IS ADMIN)
-
-          DELETE http://localhost:4000/api/services/:id
-
-    auth:
-
-    ```js
-        auth token
-    ```
 
 </details>
 <details>
 <summary>Appointments📅</summary>
 
-- **Create appointment**
 
-          POST http://localhost:4000/api/appointments/create
-
-    body:
-
-    ```js
-        {
-        "date": "2024/07/15",
-        "service_id": "1"
-        }
-    ```
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Update my appointment**
-
-          PUT http://localhost:4000/api/appointments/change/:id
-
-    body:
-
-    ```js
-        {
-        "date": "2024/07/20",
-        "service_id": "3"
-        }
-    ```
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **Retrieve appointment by id**
-
-          GET http://localhost:4000/api/appointments/:id
-
-    auth:
-
-    ```js
-        auth token
-    ```
-
-<br>
-
-- **View appointments user**
-
-          GET http://localhost:4000/api/appointments/user
-
-    auth:
-
-    ```js
-        auth token
-    ```
 </details>
 
 ## Future functionalities⏭️
