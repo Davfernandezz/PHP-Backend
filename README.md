@@ -29,9 +29,18 @@ Welcome to my PHP Backend project, I hope you like it! 📊
 This project consists of a REST API developed by php and laravel that provides the functionality to interact with the interface in the following ways:
 
 -**User registration**: Implement the registration of new users in the application.
+
 -**User login with authentication using tokens and middleware**: Ensure access security through the use of authentication tokens and Laravel middleware.
+
 -**Middleware for user roles**: Implement user role management to restrict access to certain functionalities.
+
 -**CRUD of different models**: Create, read, update and delete resources related to the different data models of the application.
+
+<br>
+<p align="center">
+<img width="300" alt="" src="img/Descripcion.jpg">
+</p>
+
 
 ## Objetive🎯
 The objective of the project is for the student to become familiar and adapt to the development of backend applications using PHP and Laravel, applying the principles and unique characteristics of this framework. Through this project, the aim is for the student to acquire practical experience in:
@@ -43,12 +52,6 @@ The objective of the project is for the student to become familiar and adapt to 
 -**Advanced Use of Eloquent and Collections**: Explore using Eloquent ORM to manage database models effectively, as well as use collections to manipulate and transform data efficiently.
 
 -**Application of Good Practices in PHP**: Adopt the best practices of PHP development, such as the separation of business logic into services, dependency injection and the proper use of common design patterns.
-
-<br>
-<p align="center">
-<img width="250" alt="" src="img/Descripcion.jpg">
-</p>
-
 
 ## Stack📒
 Used technology:
