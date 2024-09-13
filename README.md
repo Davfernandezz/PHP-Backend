@@ -3,7 +3,7 @@
 Welcome to my PHP Backend project, I hope you like it! 📊
 
 <a>
-<img src="https://user-images.githubusercontent.com/74038190/213760697-1dc03683-ba49-44f2-985e-95fd5ec22d3f.gif" width="550">
+<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/ad50585b-2e08-4f45-9836-9bb6d67e2a86" width="550">
 </a>
 <br><br>
 
@@ -26,10 +26,16 @@ Welcome to my PHP Backend project, I hope you like it! 📊
 
 ## Description📚
 
+The developed REST API provides the functionality to interact with the frontend in the following ways:
+
+- User registration: Implement the registration of new users in the application.
+- User login with authentication using tokens and middleware: Ensure access security through the use of authentication tokens and Laravel middleware.
+- Middleware for user roles: Implement user role management to restrict access to certain functionalities.
+- CRUD of different models: Create, read, update and delete resources related to the different data models of the application.
 
 
 ## Objetive🎯
-
+The main objective is to develop a solid and functional Backend structure that integrates with an existing Frontend previously developed in React.
 
 
 ## Stack📒
@@ -57,10 +63,6 @@ Used technology:
 
 
 ## Diagram BD📋
-
-
-
-    - "Roles" to "Users": One-to-many relationship where one role can have many users.
 
     - "Users" to "Appointments": One-to-many relationship where one user can have many appointments.
 
@@ -294,8 +296,8 @@ Used technology:
 </details>
 
 ## Future functionalities⏭️
-- 
-- 
+- Advanced logging system
+- Data validation
 - ...
 
 
