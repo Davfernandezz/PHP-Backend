@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::put('/users/{id}', [UserController::class, 'update']);
+
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
     Route::put('/services/{id}', [ServicesController::class, 'update']);
@@ -26,6 +27,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/appointments', [AppointmentsController::class, 'index']);
 
     Route::post('/appointments', [AppointmentsController::class, 'store']);
+
+    Route::get('/appointments/{id}', [AppointmentsController::class, 'show']);
+
+    Route::put('/appointments/{id}', [AppointmentsController::class, 'update']);
 
     Route::middleware('role:admin')->group(function () {
         
