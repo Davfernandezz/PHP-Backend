@@ -83,4 +83,24 @@ class AppointmentsController extends Controller
         return response()->json($appointment);
     }
 
+    public function destroy(Request $request)
+    {
+        $user_id = Auth::user()->id;
+        $role = Auth::user()->role;
+
+        if($role === 'admin'){
+            $appointment = appointments::find($request->id);
+            $appointment->delete();
+            return response()->json(['message' => 'Appointment deleted']);  
+        }
+
+        if($user_id != $request->user_id){
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $appointment = appointments::find($request->id);
+        $appointment->delete();
+        return response()->json(['message' => 'Appointment deleted']);
+    
+}
 }
