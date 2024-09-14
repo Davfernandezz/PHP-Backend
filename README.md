@@ -1,66 +1,204 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PHP Backend🧃
 
+Welcome to my PHP Backend project, I hope you like it! 📊
+
+<a>
+<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/897cd757-ea1f-492d-aaf9-6d1674177e08" width="550">
+</a>
+<br><br>
+
+<details>
+  <summary>Table of Contents📝</summary>
+  <ol>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#objetive">Objetive</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#diagram-bd">Diagram</a></li>
+    <li><a href="#local-installation">Local installation</a></li>
+    <li><a href="#endpoints">Endpoints</a></li>
+    <li><a href="#future-functionalities">Future functionalities</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#appreciations">Appreciations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<br>
+
+## Description📚
+
+This project consists of a REST API developed by php and laravel that provides the functionality to interact with the interface in the following ways:
+
+-**User registration**: Implement the registration of new users in the application.
+
+-**User login with authentication using tokens and middleware**: Ensure access security through the use of authentication tokens and Laravel middleware.
+
+-**Middleware for user roles**: Implement user role management to restrict access to certain functionalities.
+
+-**CRUD of different models**: Create, read, update and delete resources related to the different data models of the application.
+
+<br>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img width="250" alt="" src="img/Descripcion.jpg">
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Objetive🎯
+The objective of the project is for the student to become familiar and adapt to the development of backend applications using PHP and Laravel, applying the principles and unique characteristics of this framework. Through this project, the aim is for the student to acquire practical experience in:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-**Agile Development with Laravel**: Take advantage of the advantages of Laravel to create applications quickly and efficiently, using its routing system, database migrations and modular structure.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-**Authentication and Authorization Management**: Implement robust authentication and authorization systems through the use of middleware and tools such as Laravel Passport for token management and route protection.
 
-## Learning Laravel
+-**Advanced Use of Eloquent and Collections**: Explore using Eloquent ORM to manage database models effectively, as well as use collections to manipulate and transform data efficiently.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-**Application of Good Practices in PHP**: Adopt the best practices of PHP development, such as the separation of business logic into services, dependency injection and the proper use of common design patterns.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Stack📒
+Used technology:
+<div align="center">
+<a>
+    <img src= "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="php" />
+</a>
+<a>
+    <img src= "https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="laravel" />
+</a>
+<a>
+    <img src= "https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=Composer&logoColor=white" alt="composer" />
+</a>
+<a>
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+</a>
+<a>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="docker" />
+</a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+</div>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Diagram BD📋
 
-## Contributing
+<img width="1423" src="img/diagrama.png">
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    - "Users" to "Appointments": One-to-many relationship where one user can have many appointments.
 
-## Code of Conduct
+    - "Services" to "Appointments": One-to-many relationship where one service can have many appointments.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Local installation🧾
+1. Install docker and create a mysql container
+1. Clone the repository
+2.  ``` $ composer install  ```
+3. We connect our repository with the database
+4. ``` $ php artisan migrate ``` 
+5. ``` $ php artisan db:seed ``` 
+6. ``` $ php artisan serve ``` 
+7. ...
 
-## Security Vulnerabilities
+## Endpoints🧩
+<details>
+<summary>Authentication🔑</summary>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Register user**
 
-## License
+          POST http://127.0.0.1:8000/api/register
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    body:
+
+    ```js
+        {
+            "name":"David",
+            "last_name":"Fernandez",
+            "email":"david@gmail.com",
+            "password":"123456789",
+            "password_confirmation":"123456789"
+        }
+    ```
+
+<br>
+
+- **Login user**	
+
+          POST http://127.0.0.1:8000/api/login
+
+    body:
+
+    ```js
+        {
+            "email": "david@gmail.com",
+            "password": "123456789"
+        }
+    ```
+
+    <br>
+
+- **Logout**	
+
+          POST http://127.0.0.1:8000/api/logout
+
+    auth:
+
+    ```js
+        auth token
+    ```
+<br>
+
+- **Admin check**	
+
+          POST http://127.0.0.1:8000/api/admin/dashboard
+
+     auth:
+
+    ```js
+        auth token
+    ```
+</details>
+<details>
+<summary>Users🧑🏻</summary>
+
+
+
+</details>
+<details>
+<summary>Services🖋️</summary>
+
+
+
+</details>
+<details>
+<summary>Appointments📅</summary>
+
+
+</details>
+
+## Future functionalities⏭️
+- Advanced logging system
+- Data validation
+- ...
+
+
+## Development👨🏻‍💻
+
+```js
+const developer = "GuillermoGomez";
+
+console.log("Developed by: " GuillermoGomez);
+```
+
+```js
+const developer = "DavidFernandez";
+
+console.log("Developed by: " DavidFernandez);
+```
+
+
+## Appreciations💯
+
+I would like to dedicate my thanks to the teachers at Geeks Hubs as well as my day to day peers with whom we can help each other with our problems.
+
+
+## Contact📲
+- **Guillermo Gómez Mediavilla**
+  - [GitHub](https://github.com/guillermogm)
+- **David Fernandez Valle**
+  - [GitHub](https://github.com/Davfernandezz)
