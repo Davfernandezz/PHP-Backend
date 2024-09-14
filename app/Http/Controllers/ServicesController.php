@@ -7,6 +7,7 @@ use App\Http\Requests\StoreservicesRequest;
 use App\Http\Requests\UpdateservicesRequest;
 use Illuminate\Http\Request;
 
+
 class ServicesController extends Controller
 {
     /**
@@ -21,16 +22,12 @@ class ServicesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreservicesRequest $request)
+    public function store(Request $request)
     {   
-        $userRole = auth()->user()->role;
 
-        if ($userRole === 'admin') {
             $services = services::create($request->all());
+            $services->save();
             return response()->json($services, 201);
-        }
-        
-        return response()->json(['error' => 'No tienes permiso para crear un servicio'], 403);
     }
 
     /**

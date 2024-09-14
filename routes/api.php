@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\AppointmentsController;
+
 
 
 Route::post('/register', [AuthController::class, 'register']);
@@ -20,12 +22,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
-    Route::post('/services', [ServicesController::class, 'store']);
-
+    
     Route::middleware('role:admin')->group(function () {
+
         Route::get('/admin/dashboard', function () {
             return 'Bienvenido, Admin';
         });
+
+        Route::post('/services', [ServicesController::class, 'store']);
+        
     });
     
     Route::get('/user/profile', function () {
