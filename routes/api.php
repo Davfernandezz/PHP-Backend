@@ -17,11 +17,13 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 Route::get('/services', [ServicesController::class, 'index']);
 
 Route::middleware('auth:sanctum')->group(function () {
+    
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
+    Route::put('/services/{id}', [ServicesController::class, 'update']);
     
     Route::middleware('role:admin')->group(function () {
 

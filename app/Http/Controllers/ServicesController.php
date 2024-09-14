@@ -31,19 +31,26 @@ class ServicesController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(services $services)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateservicesRequest $request, services $services)
+    public function update(Request $request, $id)
     {
-        //
+        $userRole = auth()->user()->role;
+        $userId = auth()->user()->id;
+
+        if ($userRole === 'admin') {
+            $services = services::find($id);
+            $services->update($request->all());
+            return response()->json($services);
+        }
+        
+        if ($userId != $id) {
+            return response()->json(['error' => 'No tienes permiso para actualizar este servicio'], 403);
+        }
+
+        $services = services::find($id);
+        $services->update($request->all());
+        return response()->json($services);
     }
 
     /**
