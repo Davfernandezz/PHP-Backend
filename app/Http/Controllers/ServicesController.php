@@ -43,7 +43,7 @@ class ServicesController extends Controller
             $services->update($request->all());
             return response()->json($services);
         }
-        
+
         if ($userId != $id) {
             return response()->json(['error' => 'No tienes permiso para actualizar este servicio'], 403);
         }
@@ -56,8 +56,10 @@ class ServicesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(services $services)
+    public function destroy($id)
     {
-        //
+        $services = services::find($id);
+        $services->delete();
+        return response()->json(['message' => 'Servicio eliminado correctamente']);
     }
 }
