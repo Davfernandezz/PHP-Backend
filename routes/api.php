@@ -6,8 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\AppointmentsController;
 
-
-
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -26,7 +24,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/services/{id}', [ServicesController::class, 'update']);
 
     Route::get('/appointments', [AppointmentsController::class, 'index']);
-    
+
+    Route::post('/appointments', [AppointmentsController::class, 'store']);
+
     Route::middleware('role:admin')->group(function () {
         
         Route::get('/admin/dashboard', function () {

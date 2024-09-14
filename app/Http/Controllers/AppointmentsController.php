@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\appointments;
-use App\Http\Requests\StoreappointmentsRequest;
-use App\Http\Requests\UpdateappointmentsRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class AppointmentsController extends Controller
 {
@@ -26,9 +25,16 @@ class AppointmentsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreappointmentsRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'appointment_date' => 'required|date',
+            'user_id' => 'required|exists:users,id',
+            'service_id' => 'required|exists:services,id',
+        ]);
+
+        $appointment = appointments::create($request->all());
+        return response()->json($appointment, 201);
     }
 
     /**
@@ -39,19 +45,4 @@ class AppointmentsController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateappointmentsRequest $request, appointments $appointments)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(appointments $appointments)
-    {
-        //
-    }
 }

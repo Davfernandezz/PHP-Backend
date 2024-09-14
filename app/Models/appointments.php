@@ -13,6 +13,8 @@ class appointments extends Model
 
     protected $fillable = [
         'appointment_date',
+        'user_id',
+        'service_id',
     ];
 
 
