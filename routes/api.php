@@ -24,6 +24,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
     Route::put('/services/{id}', [ServicesController::class, 'update']);
+
+    Route::get('/appointments', [AppointmentsController::class, 'index']);
+    
     Route::middleware('role:admin')->group(function () {
         
         Route::get('/admin/dashboard', function () {

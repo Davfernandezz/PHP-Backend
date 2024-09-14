@@ -48,7 +48,7 @@ class User extends Authenticatable
 
     public function appointments()
     {
-        return $this->hasMany(appointments::class, 'user_id');
+        return $this->hasMany(appointments::class, 'user_id', 'id');
     }
 
     public function isAdmin()

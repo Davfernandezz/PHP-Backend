@@ -18,11 +18,11 @@ class appointments extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(User::class, 'id', 'user_id');
     }
 
     public function service()
     {
-        return $this->hasOne(services::class);
+        return $this->hasOne(services::class, 'id', 'service_id');
     }
 }

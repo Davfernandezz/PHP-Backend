@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\services;
-use App\Http\Requests\StoreservicesRequest;
-use App\Http\Requests\UpdateservicesRequest;
 use Illuminate\Http\Request;
 
 

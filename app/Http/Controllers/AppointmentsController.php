@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\appointments;
 use App\Http\Requests\StoreappointmentsRequest;
 use App\Http\Requests\UpdateappointmentsRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AppointmentsController extends Controller
 {
@@ -13,7 +15,12 @@ class AppointmentsController extends Controller
      */
     public function index()
     {
-        //
+        $appointments = DB::table('appointments')
+            ->select('appointments.id', 'appointments.appointment_date', 'users.name as user_name', 'services.name as service_name')
+            ->join('users', 'appointments.user_id', '=', 'users.id')
+            ->join('services', 'appointments.service_id', '=', 'services.id')
+            ->get();
+        return response()->json($appointments);
     }
 
     /**
