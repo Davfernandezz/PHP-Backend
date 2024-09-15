@@ -203,7 +203,7 @@ Used technology:
 
 - **Delete user**
 
-          PUT http://127.0.0.1:8000/api/users/{id}
+          DELETE http://127.0.0.1:8000/api/users/{id}
           
    auth:
 
@@ -216,7 +216,67 @@ Used technology:
 <details>
 <summary>Services🖋️</summary>
 
+- **Post service**
 
+          POST http://127.0.0.1:8000/api/services
+
+    body:
+
+    ```js
+        {
+            "name":"Manicure",
+            "description":"...",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get all services**
+
+          GET http://127.0.0.1:8000/api/services
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update service**
+
+          PUT http://127.0.0.1:8000/api/services/{id}
+
+    body:
+
+    ```js
+        {
+            "name":"Manicure",
+            "description":"...",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Delete service**
+
+          DELETE http://127.0.0.1:8000/api/services/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
 
 </details>
 <details>
