@@ -216,7 +216,7 @@ Used technology:
 <details>
 <summary>Services🖋️</summary>
 
-- **Post service**
+- **Post service** (IS ADMIN)
 
           POST http://127.0.0.1:8000/api/services
 
@@ -268,7 +268,7 @@ Used technology:
 
 <br>
 
-- **Delete service**
+- **Delete service** (IS ADMIN)
 
           DELETE http://127.0.0.1:8000/api/services/{id}
 
