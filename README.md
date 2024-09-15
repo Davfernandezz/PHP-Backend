@@ -156,6 +156,60 @@ Used technology:
 <details>
 <summary>Users🧑🏻</summary>
 
+- **Get all users**
+
+          GET http://127.0.0.1:8000/api/users
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get user by id**
+
+          GET http://127.0.0.1:8000/api/users/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update user**
+
+          PUT http://127.0.0.1:8000/api/users/{id}
+          
+    body:
+
+    ```js
+        {
+            "name":"David",
+            "last_name":"Fernandez",
+            "email":"david@gmail.com",
+            "password":"123456789",
+        }
+    ```
+   auth:
+
+    ```js
+        auth token
+    ```
+    <br>
+
+- **Delete user**
+
+          PUT http://127.0.0.1:8000/api/users/{id}
+          
+   auth:
+
+    ```js
+        auth token
+    ```
 
 
 </details>
