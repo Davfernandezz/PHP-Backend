@@ -156,20 +156,205 @@ Used technology:
 <details>
 <summary>Users🧑🏻</summary>
 
+- **Get all users**
+
+          GET http://127.0.0.1:8000/api/users
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get user by id**
+
+          GET http://127.0.0.1:8000/api/users/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update user**
+
+          PUT http://127.0.0.1:8000/api/users/{id}
+          
+    body:
+
+    ```js
+        {
+            "name":"David",
+            "last_name":"Fernandez",
+            "email":"david@gmail.com",
+            "password":"123456789",
+        }
+    ```
+   auth:
+
+    ```js
+        auth token
+    ```
+    <br>
+
+- **Delete user**
+
+          DELETE http://127.0.0.1:8000/api/users/{id}
+          
+   auth:
+
+    ```js
+        auth token
+    ```
 
 
 </details>
 <details>
 <summary>Services🖋️</summary>
 
+- **Post service** (IS ADMIN)
 
+          POST http://127.0.0.1:8000/api/services
+
+    body:
+
+    ```js
+        {
+            "name":"Manicure",
+            "description":"...",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get all services**
+
+          GET http://127.0.0.1:8000/api/services
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update service**
+
+          PUT http://127.0.0.1:8000/api/services/{id}
+
+    body:
+
+    ```js
+        {
+            "name":"Manicure",
+            "description":"...",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Delete service** (IS ADMIN)
+
+          DELETE http://127.0.0.1:8000/api/services/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
 
 </details>
 <details>
 <summary>Appointments📅</summary>
 
+- **Post appointment**
 
-</details>
+          POST http://127.0.0.1:8000/api/appointments
+
+    body:
+
+    ```js
+        {   
+            "appointment_date": "2024-01-01 10:00:00",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get all appointments**
+
+          GET http://127.0.0.1:8000/api/appointments
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get appointment by id**
+
+          GET http://127.0.0.1:8000/api/appointments/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update appointment**
+
+          PUT http://127.0.0.1:8000/api/appointments/{id}
+
+   body:
+
+    ```js
+        {   
+            "appointment_date": "2024-01-01 10:00:00",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Delete appointment**
+
+          DELETE http://127.0.0.1:8000/api/appointments/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+    </details>
 
 ## Future functionalities⏭️
 - Advanced logging system
