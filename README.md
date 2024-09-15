@@ -282,8 +282,79 @@ Used technology:
 <details>
 <summary>Appointments📅</summary>
 
+- **Post appointment**
 
-</details>
+          POST http://127.0.0.1:8000/api/appointments
+
+    body:
+
+    ```js
+        {   
+            "appointment_date": "2024-01-01 10:00:00",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get all appointments**
+
+          GET http://127.0.0.1:8000/api/appointments
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Get appointment by id**
+
+          GET http://127.0.0.1:8000/api/appointments/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Update appointment**
+
+          PUT http://127.0.0.1:8000/api/appointments/{id}
+
+   body:
+
+    ```js
+        {   
+            "appointment_date": "2024-01-01 10:00:00",
+        }
+    ```
+    auth:
+
+    ```js
+        auth token
+    ```
+
+<br>
+
+- **Delete appointment**
+
+          DELETE http://127.0.0.1:8000/api/appointments/{id}
+
+    auth:
+
+    ```js
+        auth token
+    ```
+
+    </details>
 
 ## Future functionalities⏭️
 - Advanced logging system
