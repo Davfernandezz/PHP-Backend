@@ -97,6 +97,7 @@ Used technology:
 
 ## Endpoints🧩
 <details>
+ Adminitrator user: admin@admin.com, admin
 <summary>Authentication🔑</summary>
 
 - **Register user**
